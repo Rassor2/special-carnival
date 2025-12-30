@@ -1,0 +1,154 @@
+{
+  "identity": {
+    "name": "RestfulMind",
+    "tone": "Trustworthy, Scientific, Calming, Professional, Serene",
+    "archetype": "Organic & Earthy (Trust, Growth, Calm)",
+    "mission": "To provide science-backed information on sleep, mental health, and productivity in a visually soothing environment."
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Playfair Display, serif",
+      "weights": ["400", "600", "700"],
+      "usage": "Main page titles, article headlines, section headers. Use font-weight 400 for elegance, 700 for impact.",
+      "letter_spacing": "tracking-tight"
+    },
+    "body": {
+      "font_family": "Lato, sans-serif",
+      "weights": ["300", "400", "700"],
+      "usage": "Article text, UI elements, navigation, buttons.",
+      "line_height": "leading-relaxed"
+    },
+    "mono": {
+      "font_family": "JetBrains Mono, monospace",
+      "usage": "Data points, tags, technical references."
+    }
+  },
+  "colors": {
+    "primary": {
+      "name": "Sage Green",
+      "hex": "#7C9A92",
+      "usage": "Primary buttons, active states, key brand elements."
+    },
+    "secondary": {
+      "name": "Soft Blue",
+      "hex": "#8FB8DE",
+      "usage": "Secondary buttons, illustrations, calm accents."
+    },
+    "accent": {
+      "name": "Warm Sand",
+      "hex": "#E8E1D5",
+      "usage": "Background highlights, cards, section dividers."
+    },
+    "background": {
+      "main": "#FAFAF9",
+      "card": "#FFFFFF",
+      "dark": "#1C1C1E"
+    },
+    "text": {
+      "primary": "#2D3748",
+      "secondary": "#4A5568",
+      "muted": "#718096"
+    },
+    "status": {
+      "success": "#48BB78",
+      "error": "#F56565",
+      "warning": "#ED8936"
+    }
+  },
+  "visual_enhancers": {
+    "radius": "rounded-lg",
+    "shadows": {
+      "card": "shadow-[0_4px_20px_-2px_rgba(0,0,0,0.05)]",
+      "hover": "shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)]"
+    },
+    "glassmorphism": {
+      "header": "bg-white/80 backdrop-blur-md border-b border-stone-100",
+      "overlay": "bg-stone-900/20 backdrop-blur-sm"
+    },
+    "textures": "Subtle noise overlay (opacity 0.03) on backgrounds to reduce digital flatness."
+  },
+  "grids": {
+    "marketing": {
+      "name": "The Tetris Grid",
+      "classes": "grid grid-cols-1 md:grid-cols-12 gap-8",
+      "rules": "Use col-span-8 for hero content, col-span-4 for supporting content. Never fill 100% perfectly."
+    },
+    "dashboard": {
+      "name": "The Control Room",
+      "classes": "grid grid-cols-1 md:grid-cols-4 gap-6",
+      "rules": "Dense layout. Widgets must stretch to match neighbors (h-full)."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#7C9A92] text-white hover:bg-[#6A857D] rounded-full px-8 py-3 transition-all duration-300 shadow-sm hover:shadow-md",
+      "secondary": "bg-[#E8E1D5] text-[#2D3748] hover:bg-[#DCD3C5] rounded-full px-6 py-2 transition-all duration-300",
+      "outline": "border border-[#7C9A92] text-[#7C9A92] hover:bg-[#7C9A92] hover:text-white rounded-full px-6 py-2 transition-all duration-300"
+    },
+    "cards": {
+      "article": "group relative overflow-hidden rounded-xl bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-stone-100",
+      "feature": "bg-[#FAFAF9] rounded-2xl p-8 border border-stone-200"
+    },
+    "inputs": {
+      "default": "bg-white border border-stone-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#7C9A92] focus:border-transparent outline-none transition-all"
+    }
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1578258691902-327e3c08b7e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxjYWxtJTIwbmF0dXJlJTIwbGFuZHNjYXBlJTIwZm9nfGVufDB8fHx8MTc2NzEyOTY2MHww&ixlib=rb-4.1.0&q=85",
+      "description": "Foggy forest landscape for hero section background or split screen."
+    },
+    "category_sleep": {
+      "url": "https://images.unsplash.com/photo-1758243954982-cd1d5a8b9f97?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxwZWFjZWZ1bCUyMGJlZHJvb20lMjBtb3JuaW5nJTIwbGlnaHR8ZW58MHx8fHwxNzY3MTI5NjYyfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Sunlight on bed, peaceful morning vibe."
+    },
+    "category_productivity": {
+      "url": "https://images.unsplash.com/photo-1700554565325-aea824405166?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHw0fHxtaW5pbWFsaXN0JTIwZGVzayUyMHBsYW50JTIwc3VubGlnaHR8ZW58MHx8fHwxNzY3MTI5NjY0fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Minimalist wooden desk with plants."
+    },
+    "category_mental_health": {
+      "url": "https://images.unsplash.com/photo-1758274539654-23fa349cc090?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBtZWRpdGF0aW5nJTIwb3V0ZG9vcnMlMjBjYWxtfGVufDB8fHx8MTc2NzEyOTY3OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Person meditating outdoors in nature."
+    },
+    "category_lifestyle": {
+      "url": "https://images.unsplash.com/photo-1628743270481-123e2501e518?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxoZWFsdGh5JTIwZm9vZCUyMGZydWl0cyUyMHZlZ2V0YWJsZXMlMjBhZXN0aGV0aWN8ZW58MHx8fHwxNzY3MTI5NjgxfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Fresh kiwi fruit, representing healthy habits."
+    },
+    "category_research": {
+      "url": "https://images.unsplash.com/photo-1692035072849-93a511f35b2c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNjaWVuY2UlMjBkbmElMjBzdHJ1Y3R1cmUlMjBibHVlfGVufDB8fHx8MTc2NzEyOTY4M3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract blue sphere, representing science and research."
+    },
+    "category_stress": {
+      "url": "https://images.unsplash.com/photo-1665764356520-3daa0e8326b1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjB3cml0aW5nJTIwam91cm5hbCUyMGNvZmZlZSUyMGNvenl8ZW58MHx8fHwxNzY3MTI5Njg1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Notepad and coffee, representing journaling and stress management."
+    }
+  },
+  "instructions_to_main_agent": {
+    "general": "You are building 'RestfulMind', a high-end editorial platform. Do not make it look like a generic Bootstrap site. Use the 'Tetris Grid' for the homepage to create visual interest. Use 'Control Room' grid for the Admin panel.",
+    "public_pages": "Use custom HTML/Tailwind. Avoid Shadcn cards for the main article feed; create a custom article card with the 'article' class defined in components. Use Playfair Display for all headings.",
+    "admin_pages": "Use Shadcn components (Table, Form, Dialog, etc.). Keep it dense and functional. Use Lato/Inter for everything here.",
+    "adsense": "Create specific 'Ad Container' components. They should have a light gray background (#F5F5F5) and a small 'Sponsored' label. Do not let them break the layout.",
+    "newsletter": "The newsletter signup should be prominent but polite. Use a soft background color (Accent) for the signup section.",
+    "accessibility": "Ensure all text meets APCA contrast standards. The Sage Green primary color is safe on white, but be careful with the Soft Blue on white text."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Create new components that match the style and conventions of existing components when needed.",
+    "Examine existing components to understand the project's component patterns before creating new ones.",
+    "Components MUST use named exports (export const ComponentName = ...).",
+    "Pages MUST use default exports (export default function PageName() {...}).",
+    "Use sonner for toasts. Sonner component are located in /app/src/components/ui/sonner.tsx."
+  ]
+}
