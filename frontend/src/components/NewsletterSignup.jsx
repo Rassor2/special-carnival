@@ -89,18 +89,19 @@ export const NewsletterSignup = ({ variant = 'default', interests = [] }) => {
             {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Subscribe'}
           </button>
         </div>
-        <label className="flex items-start gap-2 cursor-pointer">
+        <div className="flex items-start gap-2">
           <Checkbox
+            id="gdpr-compact"
             checked={gdprConsent}
             onCheckedChange={setGdprConsent}
             className="mt-0.5"
             data-testid="newsletter-gdpr-checkbox"
           />
-          <span className="text-xs text-[#718096]">
+          <label htmlFor="gdpr-compact" className="text-xs text-[#718096] cursor-pointer">
             I agree to receive emails and accept the{' '}
-            <a href="/privacy" className="text-[#7C9A92] underline">privacy policy</a>
-          </span>
-        </label>
+            <a href="/privacy" className="text-[#7C9A92] underline" onClick={(e) => e.stopPropagation()}>privacy policy</a>
+          </label>
+        </div>
       </form>
     );
   }
@@ -163,19 +164,20 @@ export const NewsletterSignup = ({ variant = 'default', interests = [] }) => {
           </div>
 
           {/* GDPR Consent */}
-          <label className="flex items-start gap-3 cursor-pointer justify-center">
+          <div className="flex items-start gap-3 justify-center">
             <Checkbox
+              id="gdpr-full"
               checked={gdprConsent}
               onCheckedChange={setGdprConsent}
               className="mt-0.5"
-              data-testid="newsletter-gdpr-checkbox"
+              data-testid="newsletter-gdpr-checkbox-full"
             />
-            <span className="text-sm text-[#718096] text-left">
+            <label htmlFor="gdpr-full" className="text-sm text-[#718096] text-left cursor-pointer">
               I agree to receive weekly emails and accept the{' '}
-              <a href="/privacy" className="text-[#7C9A92] underline">privacy policy</a>.
+              <a href="/privacy" className="text-[#7C9A92] underline" onClick={(e) => e.stopPropagation()}>privacy policy</a>.
               You can unsubscribe at any time.
-            </span>
-          </label>
+            </label>
+          </div>
         </form>
       </div>
     </div>
