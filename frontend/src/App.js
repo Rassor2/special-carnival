@@ -1,52 +1,61 @@
-import { useEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import { Toaster } from "@/components/ui/sonner";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// Public Pages
+import HomePage from "@/pages/HomePage";
+import CategoryPage from "@/pages/CategoryPage";
+import ArticlePage from "@/pages/ArticlePage";
+import WeeklyUpdatesPage from "@/pages/WeeklyUpdatesPage";
+import PrivacyPage from "@/pages/PrivacyPage";
+import TermsPage from "@/pages/TermsPage";
+import DisclaimerPage from "@/pages/DisclaimerPage";
+import ContactPage from "@/pages/ContactPage";
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
+// Admin Pages
+import AdminLogin from "@/pages/admin/AdminLogin";
+import AdminDashboard from "@/pages/admin/AdminDashboard";
+import AdminArticles from "@/pages/admin/AdminArticles";
+import AdminArticleEditor from "@/pages/admin/AdminArticleEditor";
+import AdminSubscribers from "@/pages/admin/AdminSubscribers";
+import AdminCategories from "@/pages/admin/AdminCategories";
 
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+// Layout Components
+import PublicLayout from "@/components/layout/PublicLayout";
+import AdminLayout from "@/components/layout/AdminLayout";
+import ProtectedRoute from "@/components/ProtectedRoute";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
+          {/* Public Routes */}
+          <Route element={<PublicLayout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/category/:slug" element={<CategoryPage />} />
+            <Route path="/article/:slug" element={<ArticlePage />} />
+            <Route path="/weekly-updates" element={<WeeklyUpdatesPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/disclaimer" element={<DisclaimerPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Route>
+
+          {/* Admin Routes */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route element={<ProtectedRoute><AdminLayout /></ProtectedRoute>}>
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin/articles" element={<AdminArticles />} />
+            <Route path="/admin/articles/new" element={<AdminArticleEditor />} />
+            <Route path="/admin/articles/edit/:id" element={<AdminArticleEditor />} />
+            <Route path="/admin/subscribers" element={<AdminSubscribers />} />
+            <Route path="/admin/categories" element={<AdminCategories />} />
           </Route>
         </Routes>
       </BrowserRouter>
+      <Toaster position="top-right" />
+      <div className="noise-overlay" aria-hidden="true" />
     </div>
   );
 }
